@@ -1,7 +1,84 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\BladeController;
 
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/blade', function() {
+    return view('blade.index');
+});
+
+Route::get('/blade/task1', [BladeController::class, 'task1']);
+Route::get('/blade/task36', [BladeController::class, 'task36']);
+Route::get('/blade/task35', [BladeController::class, 'task35']);
+Route::get('/blade/task34', [BladeController::class, 'task34']);
+Route::get('/blade/task33', [BladeController::class, 'task33']);
+Route::get('/blade/task32', [BladeController::class, 'task32']);
+Route::get('/blade/task31', [BladeController::class, 'task31']);
+Route::get('/blade/task30', [BladeController::class, 'task30']);
+Route::get('/blade/task29', [BladeController::class, 'task29']);
+Route::get('/blade/task28', [BladeController::class, 'task28']);
+Route::get('/blade/task27', [BladeController::class, 'task27']);
+Route::get('/blade/task26', [BladeController::class, 'task26']);
+Route::get('/blade/task25', [BladeController::class, 'task25']);
+Route::get('/blade/task24', [BladeController::class, 'task24']);
+Route::get('/blade/task23', [BladeController::class, 'task23']);
+Route::get('/blade/task22', [BladeController::class, 'task22']);
+Route::get('/blade/task21', [BladeController::class, 'task21']);
+Route::get('/blade/task20', [BladeController::class, 'task20']);
+Route::get('/blade/task19', [BladeController::class, 'task19']);
+Route::get('/blade/task18', [BladeController::class, 'task18']);
+Route::get('/blade/task17', [BladeController::class, 'task17']);
+Route::get('/blade/task16', [BladeController::class, 'task16']);
+Route::get('/blade/task15', [BladeController::class, 'task15']);
+Route::get('/blade/task14', [BladeController::class, 'task14']);
+Route::get('/blade/task13', [BladeController::class, 'task13']);
+Route::get('/blade/task12', [BladeController::class, 'task12']);
+Route::get('/blade/task11', [BladeController::class, 'task11']);
+Route::get('/blade/task10', [BladeController::class, 'task10']);
+Route::get('/blade/task9', [BladeController::class, 'task9']);
+Route::get('/blade/task8', [BladeController::class, 'task8']);
+Route::get('/blade/task7', [BladeController::class, 'task7']);
+Route::get('/blade/task6', [BladeController::class, 'task6']);
+Route::get('/blade/task5', [BladeController::class, 'task5']);
+Route::get('/blade/task4', [BladeController::class, 'task4']);
+Route::get('/blade/task3', [BladeController::class, 'task3']);
+Route::get('/blade/task2', [BladeController::class, 'task2']);
+Route::get('/blade/task2', [BladeController::class, 'task2']);
+Route::get('/blade/task3', [BladeController::class, 'task3']);
+Route::get('/blade/task4', [BladeController::class, 'task4']);
+Route::get('/blade/task5', [BladeController::class, 'task5']);
+Route::get('/blade/task6', [BladeController::class, 'task6']);
+Route::get('/blade/task7', [BladeController::class, 'task7']);
+Route::get('/blade/task8', [BladeController::class, 'task8']);
+Route::get('/blade/task9', [BladeController::class, 'task9']);
+Route::get('/blade/task10', [BladeController::class, 'task10']);
+Route::get('/blade/task11', [BladeController::class, 'task11']);
+Route::get('/blade/task12', [BladeController::class, 'task12']);
+Route::get('/blade/task13', [BladeController::class, 'task13']);
+Route::get('/blade/task14', [BladeController::class, 'task14']);
+Route::get('/blade/task15', [BladeController::class, 'task15']);
+Route::get('/blade/task16', [BladeController::class, 'task16']);
+Route::get('/blade/task17', [BladeController::class, 'task17']);
+Route::get('/blade/task18', [BladeController::class, 'task18']);
+Route::get('/blade/task19', [BladeController::class, 'task19']);
+Route::get('/blade/task20', [BladeController::class, 'task20']);
+Route::get('/blade/task21', [BladeController::class, 'task21']);
+Route::get('/blade/task22', [BladeController::class, 'task22']);
+Route::get('/blade/task23', [BladeController::class, 'task23']);
+Route::get('/blade/task24', [BladeController::class, 'task24']);
+Route::get('/blade/task25', [BladeController::class, 'task25']);
+Route::get('/blade/task26', [BladeController::class, 'task26']);
+Route::get('/blade/task27', [BladeController::class, 'task27']);
+Route::get('/blade/task28', [BladeController::class, 'task28']);
+Route::get('/blade/task29', [BladeController::class, 'task29']);
+Route::get('/blade/task30', [BladeController::class, 'task30']);
+Route::get('/blade/task31', [BladeController::class, 'task31']);
+Route::get('/blade/task32', [BladeController::class, 'task32']);
+Route::get('/blade/task33', [BladeController::class, 'task33']);
+Route::get('/blade/task34', [BladeController::class, 'task34']);
+Route::get('/blade/task35', [BladeController::class, 'task35']);
+Route::get('/blade/task36', [BladeController::class, 'task36']);
