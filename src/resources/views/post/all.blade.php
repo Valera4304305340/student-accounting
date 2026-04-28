@@ -13,18 +13,20 @@
 <body>
     <h1>Список всех статей</h1>
     
-    <<table>
+   <table>
     <tr>
         <th>ID</th>
-        <th>Заголовок (title)</th>
-        <th>Краткое описание (desc)</th>
+        <th>Заголовок</th>
+        <th>Описание</th>
+        <th>Действия</th>  <!-- Новая колонка -->
     </tr>
     
     @foreach ($posts as $post)
     <tr>
         <td>{{ $post->id }}</td>
         <td><a href="/post/{{ $post->id }}">{{ $post->title }}</a></td>
-        <td>{{ Str::limit($post->text, 50) }}</td>
+        <td>{{ Str::limit($post->text ?? $post->slug, 50) }}</td>
+        <td><a href="/post/edit/{{ $post->id }}">✏️ Редактировать</a></td>
     </tr>
     @endforeach
 </table>
