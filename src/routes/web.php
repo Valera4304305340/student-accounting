@@ -82,3 +82,23 @@ Route::get('/blade/task33', [BladeController::class, 'task33']);
 Route::get('/blade/task34', [BladeController::class, 'task34']);
 Route::get('/blade/task35', [BladeController::class, 'task35']);
 Route::get('/blade/task36', [BladeController::class, 'task36']);
+
+// ========== Маршруты для работы со статьями (Задачи 25.1-25.10) ==========
+Route::get("/post/all", [App\Http\Controllers\PostController::class, "getAll"]);
+Route::get("/post/all/{order}", [App\Http\Controllers\PostController::class, "getAll"])
+    ->where("order", "id|title|date");
+Route::get("/post/all/{order}/{dir}", [App\Http\Controllers\PostController::class, "getAll"])
+    ->where("order", "id|title|date")
+    ->where("dir", "asc|desc");
+
+Route::get("/post/{id}", [App\Http\Controllers\PostController::class, "getOne"])
+    ->where("id", "[0-9]+");
+
+Route::get("/post/all", [App\Http\Controllers\PostController::class, "getAll"]);
+Route::get("/post/all/{order}", [App\Http\Controllers\PostController::class, "getAll"])
+    ->where("order", "id|title|date");
+Route::get("/post/all/{order}/{dir}", [App\Http\Controllers\PostController::class, "getAll"])
+    ->where("order", "id|title|date")
+    ->where("dir", "asc|desc");
+Route::get("/post/{id}", [App\Http\Controllers\PostController::class, "getOne"])
+    ->where("id", "[0-9]+");
