@@ -97,4 +97,26 @@ class PostController extends Controller
         $count = Post::where("likes", 0)->delete();
         return redirect("/post/all")->with("success", "Удалено {$count} статей с нулевыми лайками!");
     }
+    // Задача 27.1: Удаление статьи (жесткое удаление)
+public function delPost($id)
+{
+    $post = Post::find($id);
+    
+    if ($post) {
+        $title = $post->title;
+        $post->delete(); // Жесткое удаление из БД
+        
+        return redirect('/post/all')->with('success', 'Статья #' . $id . ' "' . $title . '" успешно удалена!');
+    }
+    
+    return redirect('/post/all')->with('error', 'Статья #' . $id . ' не найдена!');
+}
+// Задача 27.4: Получение удаленных статей
+public function getDeletedPost()
+{
+    // onlyTrashed() - получаем только мягко удаленные записи
+    $deletedPosts = Post::onlyTrashed()->get();
+    
+    return view('post.deleted', compact('deletedPosts'));
+}
 }

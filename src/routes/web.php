@@ -102,3 +102,15 @@ Route::get("/post/all/{order}/{dir}", [App\Http\Controllers\PostController::clas
     ->where("dir", "asc|desc");
 Route::get("/post/{id}", [App\Http\Controllers\PostController::class, "getOne"])
     ->where("id", "[0-9]+");
+Route::get('/post/del/{id}', [PostController::class, 'delPost'])->where('id', '[0-9]+');
+// Задача 27.1: Удаление статьи
+Route::get('/post/del/{id}', [PostController::class, 'delPost'])->where('id', '[0-9]+');
+
+// Задача 27.4: Список удаленных статей
+Route::get('/post/deleted', [PostController::class, 'getDeletedPost']);
+
+// Задача 27.5: Восстановление статьи
+Route::get('/post/restore/{id}', [PostController::class, 'restorePost'])->where('id', '[0-9]+');
+
+// Полное удаление (навсегда)
+Route::get('/post/force-delete/{id}', [PostController::class, 'forceDeletePost'])->where('id', '[0-9]+');
