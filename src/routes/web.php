@@ -114,3 +114,16 @@ Route::get('/post/restore/{id}', [PostController::class, 'restorePost'])->where(
 
 // Полное удаление (навсегда)
 Route::get('/post/force-delete/{id}', [PostController::class, 'forceDeletePost'])->where('id', '[0-9]+');
+Route::get('/countries', [UserController::class, 'getAllCountriesWithCities']);
+Route::get('/users-countries', [UserController::class, 'getAllUsersWithCountries']);
+// Задачи 28.1-28.16: Связи моделей
+Route::get('/user/{id}', [UserController::class, 'getUserWithProfile']);
+Route::get('/users', [UserController::class, 'getAllUsersWithProfiles']);
+Route::get('/user-city/{id}', [UserController::class, 'getUserWithCity']);
+Route::get('/users-cities', [UserController::class, 'getAllUsersWithCities']);
+Route::get('/cities', [UserController::class, 'getAllCitiesWithCountries']);
+Route::get('/users-full', [UserController::class, 'getAllUsersWithCitiesAndCountries']);
+Route::get('/countries', [UserController::class, 'getAllCountriesWithCities']);
+Route::get('/users-countries', [UserController::class, 'getAllUsersWithCountries']);
+Route::get('/products', [UserController::class, 'getAllProductsWithCategories']);
+Route::get('/categories', [UserController::class, 'getAllCategoriesWithProducts']);
